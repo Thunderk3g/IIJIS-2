@@ -1,0 +1,55 @@
+<div class="sj-innerbanner">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="sj-innerbannercontent">
+          <h1>Archives</h1>
+          <ol class="sj-breadcrumb">
+            <li><a [routerLink]="['']">Home</a></li>
+            <li><a [routerLink]="['archives']">Archives</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--************************************
+					Home Banner Start
+			*************************************-->
+      <main id="sj-main" class="sj-main sj-haslayout sj-sectionspace">
+				<div id="sj-twocolumns" class="sj-twocolumns">
+					<div class="container">
+			<div id="sj-homebanner" class="sj-homebanner" *ngIf="issues.length > 0">
+				<div class="container">
+					<div class="row" *ngFor="let issue of issues" style="margin-bottom:30px !important;overflow: hidden;">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+							<div class="sj-postbook">
+								<figure class="sj-featureimg">
+									<div class="sj-bookimg">
+										<div class="sj-frontcover"><img [src]="getimage(issue)"></div>
+									</div>
+								</figure>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+							<div class="sj-bannercontent">
+								<h1>{{issue?.title}}</h1>
+								<div class="sj-description">
+									<p>{{issue?.description}}</p>
+								</div>
+							</div>
+
+            <ul>
+              <li *ngFor="let sub of issue?.submissions">{{sub?.title }} by {{sub?.author}} <i class="fa fa-download"><a href="javascript:void(0);" (click)="download(sub)">Download</a></i></li>
+            </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--************************************
+					Home Banner End
+			*************************************-->
+      <h3 *ngIf="issues.length == 0" class="text-center">No Releases Found :(</h3>
+</div>
+</div>
+</main>

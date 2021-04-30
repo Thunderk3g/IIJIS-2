@@ -1,0 +1,11 @@
+.board{
+  height: 300px;
+  width:100%;
+}
+.sj-authorguidelines h3{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  padding-top: 10px;
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+export type initSubmissionModel = {
+  title: string;
+  category: string;
+  commentsforeditor: string;
+  agree: string;
+  unique: string;
+  filetype: number;
+  urlprovided: string;
+  formatted: string;
+  followsguidelines: string;
+  user: string;
+  stage : number;
+  id?: string;
+  articlecomponent?: string;
+  file?: any;
+  description?: string;
+  author?: string;
+  publisher?: string;
+  source?: string;
+  subject?: string;
+  contributor?: string;
+  date?: string;
+  language?: string;
+  metadata?: any;
+  confirm: any;
+};

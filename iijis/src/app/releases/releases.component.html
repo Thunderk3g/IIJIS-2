@@ -1,0 +1,83 @@
+<main id="sj-main" class="sj-main sj-haslayout sj-sectionspace">
+<div class="container">
+
+<form class="sj-formtheme sj-formarticle" [formGroup]="releaseForm" (ngSubmit)="createrelease()">
+  <div class="sj-dashboardboxtitle sj-titlewithform">
+    <h2>Create a release</h2>
+        <button type="submit" style="float:right" class="sj-btn sj-btnactive">Create Release</button>
+  </div>
+  <fieldset>
+    <div class="form-group">
+      <input type="text" name="title" formControlName="title" class="form-control" placeholder="Title of Release *">
+    </div>
+    <div class="form-group">
+      <input type="text" name="description" formControlName="description" class="form-control" placeholder="Description of release">
+    </div>
+    <div class="form-group">
+      <input type="text" name="intervieweename" formControlName="intervieweename" class="form-control" placeholder="Name of interviewee *">
+    </div>
+  </fieldset>
+</form>
+<form class="sj-formtheme sj-formarticle" style="margin-top:20px">
+  <fieldset class="sj-dragdropimg">
+    <div class="sj-inputtyfile">
+      <div class="sj-title">
+        <h3>Upload Cover Image</h3>
+      </div>
+      <label for="file">
+        <span>{{filename}}</span>
+        <span><i class="ti-upload"></i></span>
+        <input [disabled]="uploaded" type="file" name="file" id="file"  (change)="uploadDocument($event.target.files[0])">
+      </label>
+      <div class="sj-filedetails">
+        <span>File should be max 500kb </span>
+        <em *ngIf="file === undefined">Not Uploaded Yet</em>
+      </div>
+    </div>
+    <div class="sj-inputtyfile">
+      <div class="sj-title">
+        <h3>Upload Interviewer Image</h3>
+      </div>
+      <label for="file1">
+        <span>{{filename1}}</span>
+        <span><i class="ti-upload"></i></span>
+        <input [disabled]="uploaded1" type="file" name="file1" id="file1"  (change)="uploadDocument1($event.target.files[0])">
+      </label>
+      <div class="sj-filedetails">
+        <span>File should be max 500kb </span>
+        <em *ngIf="file1 === undefined">Not Uploaded Yet</em>
+      </div>
+    </div>
+    
+  </fieldset>
+  <div class="sj-title">
+    <h3 style="margin-top:20px">Select Articles to include</h3>
+  </div>
+  <fieldset>
+    <div class="form-group sj-authorhold">
+      <span class="sj-select">
+        <select name="selecteduser" [ngModel]="selecteduser" (ngModelChange)="getSubmissions($event)">
+          <option value="" selected disabled>Select Author</option>
+          <option [value]="user.id" *ngFor="let user of users">{{user.firstName + " " + user.lastName}}</option>
+        </select>
+      </span>
+    </div>
+    <div class="form-group sj-authorholdvtwo">
+      <span class="sj-select">
+        <select #selected name="selectedarticle" ([ngModel])="selectedarticle">
+          <option value="" selected disabled>Select Article</option>
+          <option [value]="submission.id" *ngFor="let submission of usersubmissions">{{submission.title}}</option>
+        </select>
+      </span>
+      <div class="sj-adddelbtns">
+        <button (click)="addtolist(selected.value)" class="sj-addbtn"><i class="fa fa-plus"></i></button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+<label for="" *ngIf="submission.length > 0">Selected Submissions</label>
+<ul class="accordion">
+  <li *ngFor="let submission of submission">{{submission.title}} <button style="margin-left:20px" class="btn" (click)="delete(submission)"><i class="fa fa-trash"></i></button></li>
+</ul>
+</div>
+</main>

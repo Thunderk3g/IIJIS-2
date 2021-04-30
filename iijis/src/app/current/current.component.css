@@ -1,0 +1,195 @@
+li{
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+main > h1{
+  font-size: 52px !important;
+    margin: 0 0 32px !important;
+    padding: 0 0 22px !important;
+    line-height: 62px !important;
+    position: relative !important;
+}
+.img{
+  max-width: 403px;
+  max-height: 540px;
+}
+.interviewee img{
+
+max-width: 260px;
+border: 5px solid gray;
+
+}
+.interviewee{
+  text-align: left !important;
+  margin-top:80px;
+  margin-bottom: 15px;
+}
+.sj-bannercontent h1 {
+  font-size: 52px !important;
+  margin: 0 0 32px !important;
+  padding: 0 0 22px !important;
+  line-height: 62px !important;
+  position: relative !important;
+}
+/***HERO BANNER****/
+.sj-topbanner{
+  position: relative; 
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sj-topbanner::before  {    
+    content: "";
+    background-image: url('../../assets/images/hero-scroll/background.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+.journal-header__title{
+  position: relative;
+  color: #000;  
+  font-family: 'Helvetica Neue';
+  font-size: 3rem;
+  line-height: 0.9;
+  text-align: left;
+}
+.journal-header__image img{
+   width: 300px;
+  height: 365px;
+}
+.sj-topbanner .btn{
+    margin-left: 30px;
+    margin-top: 130px;
+    display: inline-block;
+    background-color: #006f7a;
+    border-radius: 1.25em;
+    color: #fff;
+    line-height: 2.5em;
+    padding: 0 3.5em 0 1.5em;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: 0.2s background-color cubic-bezier(0.2, 1, 1, 1);
+    -o-transition: 0.2s background-color cubic-bezier(0.2, 1, 1, 1);
+    transition: 0.2s background-color cubic-bezier(0.2, 1, 1, 1);
+    font-weight: 500;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.sj-topbanner .btn::after{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: #00a390;
+    content: "";
+    background-image: url('../../assets/images/hero-scroll/right-arrow.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 0.5em;
+}
+@media only screen and (max-width: 320px){
+  .journal-header__title{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0px;
+  }
+  .sj-topbanner .btn{
+    margin-left: 70px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .journal-header__image img{
+    margin-left: 37px;
+    width: 200px;
+    height: 300px;
+  }
+}
+/********************************************/
+
+/***Accordian Banner****/
+.accordion{
+  
+  margin: 40px 0;
+}
+.accordion .item {
+    -webkit-box-shadow:  10px 20px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow:  10px 20px   rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 20px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 50px;
+    background: none;
+}
+.t-p{
+  color: #000;
+  padding: 20px 30px 30px 30px;
+}
+.accordion .item .item-header h2 button.btn.btn-link {
+    background: #fff;
+    color: #000;
+    border-radius: 0px;
+    font-family: 'Helvetica Neue';
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 2.5;
+    text-decoration: none;
+}
+.accordion .item .item-header {
+    border-bottom: none;
+    background: transparent;
+    padding: 0px;
+    margin: 2px;
+}
+
+.accordion .item .item-header h2 button {
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .item .item-header h2 i {
+    float: right;
+    font-size: 30px;
+    color: #000;
+    background-color: #fff;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+button.btn.btn-link.collapsed i {
+    transform: rotate(0deg);
+}
+
+button.btn.btn-link i {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 320px){
+  .accordion .item .item-header h2 button.btn.btn-link{
+    font-size: 0.8em;
+
+  }
+}
+.sj-accordian .accordion li{
+  font-size: 13px;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,11 @@
+.sj-innerbannercontent h1 {
+  margin: 0;
+  float: left;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+}
+img{
+  aspect-ratio: 1 / 1;
+}

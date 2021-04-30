@@ -1,0 +1,190 @@
+
+
+
+<div class="container p-0">		  
+<!--************************************
+					Top Banner Start
+	*************************************-->
+	<div class="sj-topbanner" class="sj-topbanner">
+		<div class="container">
+			<div class="row">
+			<div class="col-12 col-sm-12 col-md-8 col-lg-8">
+				<h1 class="journal-header__title">
+					Indian Innovation Journals of Indian Start-up
+				</h1>
+				<div class ="container p-0 m-0">
+				<a href="https://mc.manuscriptcentral.com/jhass" class="btn" target="_blank">
+					Submit
+				</a>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+				<h1 class="journal-header__image">
+					<img class ="img" [src]="imageToShow">			
+				</h1>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!--************************************
+					Top Banner Ends
+	*************************************-->
+
+<!--************************************
+					Home Banner Start
+			*************************************-->
+			<div id="sj-homebanner" class="sj-homebanner" *ngIf="issue !== null">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+							<div class="sj-postbook">
+								<figure class="sj-featureimg">
+									<div class="sj-bookimg" style="margin-top:40px;">
+										<div class="sj-frontcover"><img class ="img" [src]="imageToShow"></div>
+									</div>
+								</figure>
+							</div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+							<div class="sj-bannercontent">
+								<h1>{{issue?.title}}</h1>
+								<div class="sj-description">
+									<p>{{issue?.description}}</p>
+
+								</div>
+							</div>
+
+            <ul>
+              <li *ngFor="let sub of issue?.submissions">{{sub?.title }} by {{sub?.author}} <i class="fa fa-download"><a href="javascript:void(0);" (click)="download(sub)">Download</a></i></li>
+            </ul>
+		</div>
+			<div class="col-12">
+				<div class="interviewee text-center">
+						<p style="text-align:left;display: block;font-size: 28px;font-weight: bold;
+						  line-height: 32px;">Interviewee this month : {{issue?.intervieweename}}</p>
+							 <img [src]="imageToShow1"></div>
+			  </div>
+				<!--************************************
+					Accordian Starts
+	*************************************-->
+	<div class="col-12">
+	<div id="sj-accordian" class="sj-accordian">
+		<div class="container">
+			<div class="accordion" id="accordion">
+			  <div class="item">
+				 <div class="item-header" id="headingOne">
+					<h2 class="mb-0">
+					   <button class="btn btn-link" type="button" data-toggle="collapse"
+						  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						  JOURNAL DESCRIPTION
+					   <i class="fa fa-angle-down"></i>
+					   </button>
+					</h2>
+				 </div>
+				 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+					data-parent="#accordionExample">
+					<div class="t-p">
+						<b>The Indian Innovations:</b> Journal of Indian Start-ups is committed to publishing policy and business analysis related to start-ups. The journal encourages new ideas, creative approaches and analytical perspectives on areas such as: Entrepreneurship, Economics and Finance, Public Policy on start-ups and entrepreneurship, Leadership and Sustainable Development.
+					</div>
+				 </div>
+			  </div>
+			  <div class="item">
+				 <div class="item-header" id="headingTwo">
+					<h2 class="mb-0">
+					   <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+						  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						  AIMS AND SCOPE
+					  <i class="fa fa-angle-down"></i>
+					   </button>
+					</h2>
+				 </div>
+				 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionExample">
+					<div class="t-p">
+						<b>The Indian Innovations:</b> Journal of Indian Start-ups is a student-run initiative that aims to delve into the start-up ecosystem in India. The journal aims to capture the success(and failure) stories of Indian Start-ups, combined with interviews from Industry Experts, case studies and data analysis and policy analysis to facilitate a comprehensive understanding of various elements that are necessary to create a strong Start-up ecosystem and spread awareness regarding the same. The journal emanates knowledge about the different aspects affecting the start-ups with a broader view.
+						The journal is meant for researchers, students, and readers interested in the current issues and developments of the Indian start-ups. The journal will be published electronically. It will be easily accessible and free of charge, widely across the region. We also welcome views on recent business-relevant books, news, announcements, presentations of current research, and significant projects.						
+					</div>
+				 </div>
+			  </div>
+			  <div class="item">
+				 <div class="item-header" id="headingThree">
+					<h2 class="mb-0">
+					   <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+						  data-target="#collapseThree" aria-expanded="false"
+						  aria-controls="collapseThree">
+							AUTHOR GUIDELINE
+						  <i class="fa fa-angle-down"></i>
+					   </button>
+					</h2>
+				 </div>
+				 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+					data-parent="#accordionExample">
+					<div class="t-p">
+						<b>Indian Innovations:</b> Journal of Indian Start-ups publishes articles, interviews, case studies and data analysis reports.
+						You can use this list to carry out a final check of your submission before you send it to the journal for review. Please check the relevant section in this Guide for Authors for more details.
+						Ensure That The Following Items Are Present:
+						<li>Email address</li>
+						<li>Full postal address</li>
+						For Manuscripts:
+						<li>Files can be in the following formats: DOC, DOCX or PDF. Microsoft documents should not be locked or protected</li>
+						<li>Manuscripts must be submitted in English</li>
+						<li>Use a standard font and standard size</li>
+						<li>All figures, graphs, diagrams and tables must include captions and details</li>
+						<li>Indicate clearly if any colour is to be used for any figures in print</li>
+						<li>All references mentioned in the Reference list are cited in the text, and vice-versa</li>
+						<li>Permission has been obtained for use of copyrighted material from other sources (including internet)</li>
+
+					</div>
+				 </div>
+			  </div>
+			  <div class="item">
+				 <div class="item-header" id="headingFour">
+					<h2 class="mb-0">
+					   <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+						  data-target="#collapseFour" aria-expanded="false"
+						  aria-controls="collapseFour">
+							ACCEPTANCE
+						  <i class="fa fa-angle-down"></i>
+					   </button>
+					</h2>
+				 </div>
+				 <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+					data-parent="#accordionExample">
+					<div class="t-p">
+						All published works in Indian Innovations: Journal of Indian start-ups are peer-reviewed and must be:
+						<li>scientifically sound</li>
+						<li>written in clear, concise and correct English</li>
+						<li>Original, unpublished work</li>
+						<br>
+						<b>Submission Declaration And Verification</b><br>
+						Submission of any work implies that the work described has not been published previously, that it is not under consideration for publication elsewhere and that if accepted, it will not be published elsewhere in the same form, in English or any other language, including electronically.
+						<br>
+						<b>Disclaimer</b><br>
+						The opinions expressed in the articles and other content appearing in the journal are purely those of the authors and may in no way reflect the opinion of the Editors or the Management of IIJIS. Authors submitting their work for publication in IIJIS are responsible for getting approval for such copyright material as they may use in their articles. IIJIS will not be held responsible for any infringement of copyright laws for the published content.
+						<br>
+						<b>Copyright Notice</b>	<br>
+						Copyright for articles published in this journal will rest with the authors, with first publication rights to the journal. As the journal follows an open access policy, articles or extracts from articles may be used by others, with proper attribution, for academic and non-commercial use.
+						Authors are required to take relevant approvals for any copyrighted material they may use in their work submitted to IR. The journal will not be responsible in any way for copyright infringements.
+						Submission of any work implies that the work described has not been published previously, that it is not under consideration for publication elsewhere and that if accepted, it will not be published elsewhere in the same form, in English or any other language, including electronically.									
+					</div>
+				 </div>
+			  </div>
+			</div>
+			</div>
+	</div>
+	</div>
+		<!--************************************
+							Accordian Ends
+			*************************************-->
+          
+					</div>
+				</div>
+			
+			</div>
+			<!--************************************
+					Home Banner End
+			*************************************-->
+
+	
+      <h3 *ngIf="issue === null" class="text-center">No Releases Found :(</h3>
+    </div>

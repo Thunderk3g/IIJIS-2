@@ -1,0 +1,29 @@
+<div class="sj-modalcontent modal-content">
+  <div class="sj-popuptitle" style="margin-bottom: 20px;">
+    <h2>Send Feedback</h2>
+    <a href="javascript:void(0);" (click)="onNoClick()" class="sj-closebtn close"><i class="lnr lnr-cross" data-dismiss="modal" aria-label="Close"></i></a>
+  </div>
+  <div class="modal-body">
+    <form class="sj-formtheme sj-formsearchvthree">
+      <fieldset>
+        <span class="sj-replyaction">Reply To This Revision</span>
+        <div class="form-group sj-firstformgroup">
+          <span class="sj-select">
+            <select data-placeholder="Accept Article" name="locations" [(ngModel)]="choice">
+              <option value="1">Accept Article</option>
+              <option value="2">Minor Rivision</option>
+              <option value="3">Major Rivision</option>
+              <option value="4">Reject Article</option>
+            </select>
+          </span>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Add Description" name="description" type="text" [(ngModel)]="description"></textarea>
+        </div>
+      </fieldset>
+    </form>
+    <div class="sj-popupbtn sj-popupbtnvtwo">
+      <button type="button" class="sj-btn sj-btnactive" (click)="send()">Send Now</button>
+    </div>
+  </div>
+</div>

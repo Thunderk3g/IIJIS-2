@@ -1,0 +1,36 @@
+<ngx-loading-bar></ngx-loading-bar>
+<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="sj-wrapper" class="sj-wrapper">
+		<!--************************************
+				Content Wrapper Start
+		*************************************-->
+		<div class="sj-contentwrapper">
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+		  <app-footer></app-footer>
+		</div>
+		<!--************************************
+				Content Wrapper End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	<!--************************************
+			Search Start
+	*************************************-->
+	<div id="sj-searcharea" class="sj-searcharea">
+		<button type="button" class="close">×</button>
+		<form class="sj-formtheme sj-formsearcmain">
+			<input type="search" value="" placeholder="Search Here..." />
+			<button type="submit" class="sj-btn sj-btnactive"><span>Search</span></button>
+		</form>
+	</div>
+  <!-- SCROLLTOP BUTTON -->
+<ngx-scrolltop [backgroundColor]="'#636c77'"></ngx-scrolltop>

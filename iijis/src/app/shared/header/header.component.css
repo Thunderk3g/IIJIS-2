@@ -1,0 +1,79 @@
+.sj-logo a img{
+  max-width: 100px;
+}
+.sj-userloginarea{
+  display: block;
+}
+.sj-loginusername span{
+  color : #fff;
+}
+.sj-userloginarea > a > i {
+  color: #fff;
+}
+.sj-loginusername h3{
+  color : #fff;
+}
+.heading{
+  display: inline;
+    font-size: 24px;
+    /* padding-left: 74px; */
+    width: auto;
+    position: relative;
+    left: 20px;
+    top: 5px;
+    font-weight: 500;
+    color:#fdb532;
+}
+@media only screen and (max-width: 768px) {
+  .sj-languagelogin {
+    margin-left: 15px;
+    float: left;
+}
+}
+.sj-rightarea{
+  float: left ;
+  margin-left:195px;
+}
+@media only screen and (max-width: 320px){
+  .sj-rightarea{
+    float: left !important;
+    margin-left:250px;
+    margin-top: -75px;
+  }
+  .sj-loginusername span{
+    margin-left: 25px;
+    color : #fff;
+  }
+  .sj-userloginarea img{
+    margin:0px;
+    margin-left: 53px;
+  }
+  .sj-loginusername h3{
+    font-family: 'Quicksand';
+    padding-left: 15px;
+    color : #000;
+  }
+  .sj-loging li a {
+    color: black !important;
+    margin-left:-41px;
+
+  }
+}
+.sj-loging li a {
+  color: #fff;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  padding-top: 1px;
+  margin-right: 5px;
+}
+.sj-userloginarea img {
+  margin-left: 5px;
+  width: 51px;
+  float: left;
+  height: 45px;
+  padding: 3px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+  border: 1px solid #ddd;
+}

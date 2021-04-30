@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{D8sx:function(n,t,e){"use strict";e.d(t,"a",function(){return c});var s=e("fXoL");let c=(()=>{class n{constructor(){}ngOnInit(){}}return n.\u0275fac=function(t){return new(t||n)},n.\u0275cmp=s.Ib({type:n,selectors:[["app-aside"]],decls:0,vars:0,template:function(n,t){},styles:[""]}),n})()}}]);

@@ -1,0 +1,83 @@
+<!--************************************
+					Inner Banner Start
+			*************************************-->
+			<div class="sj-innerbanner">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="sj-innerbannercontent">
+								<h1>Login</h1>
+								<ol class="sj-breadcrumb">
+									<li><a [routerLink]="['']">Home</a></li>
+									<li><a [routerLink]="['/register']">Register</a></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--************************************
+					Inner Banner End
+			*************************************-->
+			<!--************************************
+					Main Start
+			*************************************-->
+			<main id="sj-main" class="sj-main sj-haslayout sj-sectionspace sj-loginupdates">
+				<div id="sj-twocolumns" class="sj-twocolumns">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+								<div id="sj-content" class="sj-content">
+									<div class="sj-loginarea">
+										<div class="loginnow">
+											<div class="sj-registerformholder">
+												<div class="row">
+													<div class="col-12 col-sm-12 col-md-12 col-lg-6">
+														<form class="sj-formtheme sj-formlogin" [formGroup]="loginForm" (ngSubmit)="validateAndLogin()" >
+                              <fieldset>
+                                <div class="form-group">
+                                  <input type="text" name="username" class="form-control" formControlName="username" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                  <input type="password" name="password" class="form-control" formControlName="password" placeholder="Password">
+                                </div>
+                                <div class="form-group sj-forgotpass">
+                                  <div class="sj-checkbox">
+                                    <input type="checkbox" id="login" formControlName="remember">
+                                    <label for="login">keep me logged in</label>
+                                  </div>
+                                  <a class="sj-forgorpass" href="javascript:void(0);">Forgot Password?</a>
+                                </div>
+                                <div class="sj-btnarea">
+                                  <button class="sj-btn sj-btnactive" type="submit">Login</button>
+                                </div>
+                              </fieldset>
+                            </form>
+													</div>
+													<div class="col-12 col-sm-12 col-md-12 col-lg-6">
+														<div class="sj-howtoregister">
+															<h3>Login to access our services.</h3>
+															<div class="sj-description">
+																<p>By login you are accepting the following.</p>
+															</div>
+															<ul class="sj-liststyle">
+																<li><span> You agree to have my data collected and stored according to the privacy statement.</span></li>
+																<li><span> You would like to be notified of new publications and announcements.</span></li>
+																<li><span> You would like to be contacted with requests to review submissions to this journal.</span></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!--************************************
+					Main End
+			*************************************-->
+

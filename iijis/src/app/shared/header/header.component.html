@@ -1,0 +1,91 @@
+<!--************************************
+					Header Start
+			*************************************-->
+<header id="sj-header" class="sj-header sj-haslayout">
+    <div class="container">
+        <div class="row">
+                <div class="sj-navigationarea">
+                    <strong class="sj-logo">
+                        <a [routerLink]="['']"><img src="../../../assets/images/logo1.png" alt="company logo here"></a>
+                    </strong>
+                    <div class="sj-rightarea">
+                        <nav id="sj-nav" class="sj-nav navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="lnr lnr-menu"></i>
+                            </button>
+                            <div class="collapse navbar-collapse sj-navigation" id="navbarNav">
+                                <ul>
+                                    <li><a [routerLink]="['/aims']">Aims & Scope</a></li>
+                                    <li><a [routerLink]="['/board']">Board</a></li>
+                                    <li><a [routerLink]="['/guidelines']">Guidelines</a></li>
+                                    <li><a [routerLink]="['/current']">Current</a></li>
+                                    <li><a [routerLink]="['/archives']">Archives</a></li>
+                                    <li><a [routerLink]="['/contact']">Contact</a></li>
+									<div class="sj-languagelogin">
+										<div class="sj-loginarea" *ngIf="!loggedin">
+											<ul class="sj-loging">
+												<li>
+													<a [routerLink]="['/login']">                                
+														Login
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/register']">
+														Register
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="sj-userloginarea" *ngIf="loggedin">
+											<a href="javascript:void(0);">
+												<i class="fa fa-angle-down"></i>
+												<img *ngIf="userdata.file !== undefined" [src]="imageToShow">
+												<img *ngIf="userdata.file === undefined" src="../../../assets/images/logo2.png">
+												<div class="sj-loginusername">
+													<h3>Hi,
+														{{userdata?.firstName}}</h3>
+												</div>
+											</a>
+											<nav class="sj-usernav">
+												<ul>
+													<li *ngIf="userdata?.role === 'admin'">
+														<a [routerLink]="['/releases']">
+															<i class="lnr lnr-sync"></i>
+															<span>Releases</span>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/submissions']">
+															<i class="lnr lnr-layers"></i>
+															<span>Submissions</span>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/settings']">
+															<i class="lnr lnr-lock"></i>
+															<span>Account Settings</span>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/logout']">
+															<i class="lnr lnr-exit"></i>
+															<span>Logout</span>
+														</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+								</div>
+                                </ul>
+                            </div>
+                        </nav>
+                        <a class="sj-btn sj-btnactive" *ngIf="userdata?.role === 'user'" [routerLink]="['submission']">Submit Your Article</a>                  
+					</div>
+					
+            </div>
+        </div>
+    </div>
+</header>
+<!--************************************
+					Header End
+			*************************************-->

@@ -1,0 +1,213 @@
+<!--************************************
+					Inner Banner Start
+			*************************************-->
+<div class="sj-innerbanner">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="sj-innerbannercontent">
+          <h1>Submit Your Article</h1>
+          <ol class="sj-breadcrumb">
+            <li><a href="javascript:void(0);">Home</a></li>
+            <li><a href="javascript:void(0);">Submit Your Aticle</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--************************************
+					Inner Banner End
+			*************************************-->
+<!--************************************
+					Main Start
+			*************************************-->
+			<main id="sj-main" class="sj-main sj-haslayout sj-sectionspace">
+				<div class="container">
+					<div class="row">
+						<div id="sj-twocolumns" class="sj-twocolumns">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 float-right">
+								<div id="sj-content" class="sj-content sj-addarticleholdcontent">
+									<div class="sj-dashboardboxtitle">
+										<h2 *ngIf="progress == 0">Article Details</h2>
+                    <h2 *ngIf="progress == 20">Document Details</h2>
+                    <h2 *ngIf="progress == 40">Metadata Details</h2>
+                    <h2 *ngIf="progress == 60">Confirmation</h2>
+                    <h2 *ngIf="progress == 100">Next Steps</h2>
+                  </div>
+									<div class="sj-addarticlehold">
+										<form class="sj-formtheme sj-formarticle" [formGroup]="submissionForm" (ngSubmit)="validate()" *ngIf="progress === 0">
+											<fieldset>
+												<div class="form-group">
+													<input type="text" formControlName="title" class="form-control" placeholder="Title of Article *">
+												</div>
+												<div class="form-group">
+													<span class="sj-select">
+														<select formControlName="category">
+															<option value="" disabled selected>Select Category *</option>
+															<option value="article">Articles</option>
+															<option value="casestudy">Case Study</option>
+														</select>
+													</span>
+												</div>
+                        <div class="form-group">
+                            <label for="unique"><input type="checkbox" formControlName="unique" id="unique">&nbsp;&nbsp;The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</label>
+												</div>
+                        <div class="form-group">
+                          <label for="filetype"><input type="checkbox" formControlName="filetype" id="filetype">&nbsp;&nbsp;The submission file is in OpenOffice, Microsoft Word, or RTF document file format.</label>
+                        </div>
+                        <div class="form-group">
+                          <label for="urlprovided"><input type="checkbox" formControlName="urlprovided" id="urlprovided">&nbsp;&nbsp;Where available, URLs for the references have been provided.</label>
+                        </div>
+                        <div class="form-group">
+                          <label for="formatted"><input type="checkbox" formControlName="formatted" id="formatted">&nbsp;&nbsp;The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</label>
+                        </div>
+                        <div class="form-group">
+                          <label for="followsguidelines"><input type="checkbox" formControlName="followsguidelines" id="followsguidelines">&nbsp;&nbsp;The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.</label>
+                        </div>
+                        <div class="form-group">
+													<input type="text" formControlName="commentsforeditor" class="form-control" placeholder="Comments for the editor *">
+												</div>
+                        <div class="form-group">
+                          <label for="agree"><input type="checkbox" formControlName="agree" id="agree">&nbsp;&nbsp;Yes, I agree to have my data collected and stored according to the privacy statement.</label>
+                      </div>
+											</fieldset>
+                      <button type="submit" class="sj-btn sj-btnactive">Proceed To Uploading Document</button>
+										</form>
+                    <form class="sj-formtheme sj-formarticle" [formGroup]="documentForm" (ngSubmit)="validateDocument()" *ngIf="progress === 20">
+											<fieldset>
+                        <div class="sj-inputtyfile">
+                          <div class="sj-title">
+                              <h3>Upload Document</h3>
+                          </div>
+                          <label for="sj-uploadimgvtwo">
+                              <span>{{filename}}</span>
+                              <span><i class="ti-upload"></i></span>
+                              <input [disabled]="uploaded" #file type="file" name="uploadimgvtwo" id="sj-uploadimgvtwo"  (change)="uploadDocument($event.target.files[0])">
+                          </label>
+                          <div class="sj-filedetails">
+                              <span>File should be max 2MB </span>
+                              <em>Not Uploaded Yet</em>
+                          </div>
+                      </div>
+												<div class="form-group">
+													<span class="sj-select">
+														<select formControlName="articlecomponent">
+															<option value="" disabled selected>Select Article Component *</option>
+                                <option value="articletext">Article Text</option>
+                                <option value="researchinstrument">Research Instrument</option>
+                                <option value="researchmaterials">Research Materials</option>
+                                <option value="researchresults">Research Results</option>
+                                <option value="transcripts">Transcripts</option>
+                                <option value="dataanalysis">Data Analysis</option>
+                                <option value="dataset">Data Set</option>
+                                <option value="sourcetexts">Source Texts</option>
+                                <option value="other">Other</option>
+														</select>
+													</span>
+												</div>
+                        <div class="form-group">
+                          <textarea placeholder="Add Description" formControlName="description"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" formControlName="author" class="form-control" placeholder="Corresponding Author Title Here">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" formControlName="publisher" class="form-control" placeholder="Corresponding Publisher">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" formControlName="source" class="form-control" placeholder="Corresponding Source">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" formControlName="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" formControlName="contributor" class="form-control" placeholder="Contributor">
+                       </div>
+                       <div class="form-group">
+                         <input type="date" formControlName="date" class="form-control" placeholder="Date">
+                       </div>
+                       <div class="form-group">
+                         <input type="text" formControlName="language" class="form-control" placeholder="Language">
+                       </div>
+										   </fieldset>
+                       <button type="submit" class="sj-btn sj-btnactive" style="margin-top:10px">Proceed To Enter Metadata</button>
+										</form>
+                    <form class="sj-formtheme sj-formarticle" [formGroup]="metadataForm" (ngSubmit)="validateMetadata()" *ngIf="progress === 40">
+											<fieldset>
+                        <div class="form-group">
+                          <input type="text" placeholder="Prefix" class="form-control" formControlName="prefix">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" formControlName="title" class="form-control" placeholder="Title *">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" formControlName="subtitle" class="form-control" placeholder="Subtitle">
+                        </div>
+                        <div class="form-group">
+                          <textarea formControlName="abstract" placeholder="Add Your Abstract"></textarea>
+                      </div>
+										   </fieldset>
+                       <button type="submit" class="sj-btn sj-btnactive" style="margin-top:10px">Proceed To Confirmation</button>
+										</form>
+                    <form class="sj-formtheme sj-formarticle" [formGroup]="confirmationForm" (ngSubmit)="confirm()" *ngIf="progress === 60">
+											<fieldset>
+                        <p>Your submission has been uploaded and is ready to be sent. When you are ready, click "Finish Submission".
+                        </p>
+                        <div class="form-group">
+                          <label for="agree"><input type="checkbox" formControlName="agree">&nbsp;&nbsp;Yes, I agree to have my data collected and stored according to the privacy statement.</label>
+                      </div>
+										   </fieldset>
+                       <button type="submit" class="sj-btn sj-btnactive" style="margin-top:10px">Finish Submission</button>
+										</form>
+                    <div *ngIf="nextSteps">
+                      <h3>Submission Completed</h3>
+                      Now that you are done, you can do the following.
+                      <ul>
+                        <li><a [routerLink]="['review']">Review your submissions.</a></li>
+                        <li><a class="addhover" (click)="refresh()">Create a new submission.</a></li>
+                        <li><a [routerLink]="['submissions']">View all your submissions.</a></li>
+                      </ul>
+                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 float-left">
+								<aside id="sj-sidebarvtwo" class="sj-sidebar">
+									<div class="sj-profilestrenght">
+										<div class="sj-headerhold">
+											<div class="sj-dashboardboxtitle">
+												<h2>Article Progress</h2>
+												<span></span>
+											</div>
+											<div id="sj-ourskill" class="sj-ourskill">
+												<div class="sj-skill">
+													<div class="sj-skillholder">
+														<div class="sj-skillbar" [ngStyle]="{'width':progress === 0 ? '0%' : progress+'%' }"></div>
+													</div>
+													<span class="sj-strenghtcomplete">{{progress}}% Complete</span>
+												</div>
+											</div>
+										</div>
+										<ul class="sj-profilecomplete">
+											<li class="sj-profileerror" *ngIf="progress == 0"><i class="ti-na"></i><span>Article Details</span></li>
+                      <li class="sj-profilesuccess" *ngIf="progress >= 20"><i class="ti-check"></i><span>Article Details</span></li>
+											<li class="sj-profileerror" *ngIf="progress < 40"><i class="ti-na"></i><span>Upload Document(s)</span></li>
+											<li class="sj-profilesuccess" *ngIf="progress >= 40"><i class="ti-check"></i><span>Upload Document And Details</span></li>
+											<li class="sj-profileerror" *ngIf="progress < 60"><i class="ti-na"></i><span>Enter Metadata</span></li>
+                      <li class="sj-profilesuccess" *ngIf="progress >= 60"><i class="ti-check"></i><span>Enter Metadata</span></li>
+											<li class="sj-profileerror" *ngIf="progress < 80"><i class="ti-na"></i><span>Confirmation</span></li>
+                      <li class="sj-profilesuccess" *ngIf="progress >= 80"><i class="ti-check"></i><span>Confirmation</span></li>
+                      <li class="sj-profileerror" *ngIf="progress < 100"><i class="ti-na"></i><span>Next Steps</span></li>
+                      <li class="sj-profilesuccess" *ngIf="progress >= 100"><i class="ti-check"></i><span>Next Steps</span></li>
+										</ul>
+									</div>
+								</aside>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!--************************************
+					Main End
+			*************************************-->

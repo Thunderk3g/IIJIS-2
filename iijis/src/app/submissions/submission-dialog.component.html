@@ -1,0 +1,107 @@
+<h1 mat-dialog-title>Submission by {{data?.user?.firstName + " " + data?.user?.lastName}}</h1>
+<div mat-dialog-content>
+  <p>Submission Details</p>
+  <div class="row">
+    <div class="col-3">
+      <div >
+        <label>Title</label>
+        <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.title">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Category</label>
+        <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.category">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Author</label>
+        <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.author">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Description</label>
+        <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.description">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Contributor</label>
+        <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.contributor">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Date</label>
+          <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.date">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Language</label>
+          <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.language">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Publisher</label>
+          <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.publisher">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Source</label>
+          <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.source">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Subject</label>
+          <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.subject">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Commentsforeditor</label>
+          <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.commentsforeditor">
+      </mat-form-field>
+      </div>
+    </div>
+    <div class="col-3">
+      <div >
+        <label>Abstract</label>
+          <mat-form-field appearance="legacy">
+        <input  matInput  [(ngModel)]="data.metadata.abstract">
+      </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button (click)="ok()" cdkFocusInitial>Ok</button>
+</div>
+
